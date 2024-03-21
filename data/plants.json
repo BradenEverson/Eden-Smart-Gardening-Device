@@ -1,28 +1,12 @@
 {
     "systems": [
         {
-            "ID": 1,
-            "sunExp": 0.64,
+            "id": 1,
+            "sun_exp": 0.64,
             "humidity": 0.02,
-            "hrsSinceLastWater": 3.02,
-            "soilMoisture": 0.1,
+            "hrs_since_last_water": 3.02,
+            "soil_moisture": 0.1,
             "water": 0.89
-        },
-        {
-            "ID": 2,
-            "sunExp": 0.99,
-            "humidity": 0.01,
-            "hrsSinceLastWater": 5.02,
-            "soilMoisture": 0.01,
-            "water": 0.92
-        },
-        {
-            "ID": 3,
-            "sunExp": 0.04,
-            "humidity": 0.92,
-            "hrsSinceLastWater": 0.02,
-            "soilMoisture": 0.99,
-            "water": 0.95
         }
     ]
 }

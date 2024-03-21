@@ -72,7 +72,7 @@ app.post('/plant/update', (req, res) => {
 
         try {
             const jsonData = JSON.parse(data);
-            const systemIndex = jsonData.systems.findIndex(system => system.ID === ID);
+            const systemIndex = jsonData.systems.findIndex(system => system.id === ID);
 
             if (systemIndex === -1) {
                 return res.status(404).send('System with the specified ID not found');
