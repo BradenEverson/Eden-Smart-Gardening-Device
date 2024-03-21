@@ -7,22 +7,12 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
-app.use(express.static(__dirname + '/web'));
 app.use(cors());
 
 app.get("/", (req, res) =>{
-    res.sendFile("web/index.html");
+    res.send("Plants :)")
 });
 
-app.get("/editDevice", (req, res) =>{
-    console.log(req.params.ID);
-    res.sendFile(__dirname + "/web/edit.html");
-});
-
-app.post("/editDevice", (req, res) =>{
-    console.log(req.params.plant);
-    res.sendFile(__dirname + "/web/index.html");
-});
 
 app.get('/plants', (req, res) => {
     const filePath = path.join(__dirname, 'data', 'plants.json');
@@ -83,7 +73,7 @@ app.post('/plant/update', (req, res) => {
 
         try {
             const jsonData = JSON.parse(data);
-            const systemIndex = jsonData.systems.findIndex(system => system.id === ID);
+            const systemIndex = jsonData.systems.findIndex(system => system.ID === ID);
 
             if (systemIndex === -1) {
                 return res.status(404).send('System with the specified ID not found');
