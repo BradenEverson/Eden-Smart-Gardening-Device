@@ -7,10 +7,21 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
+app.use(express.static(__dirname + '/web'));
 app.use(cors());
 
 app.get("/", (req, res) =>{
-    res.send("Plants :)")
+    res.sendFile("web/index.html");
+});
+
+app.get("/editDevice", (req, res) =>{
+    console.log(req.params.ID);
+    res.sendFile(__dirname + "/web/edit.html");
+});
+
+app.post("/editDevice", (req, res) =>{
+    console.log(req.params.plant);
+    res.sendFile(__dirname + "/web/index.html");
 });
 
 app.get('/plants', (req, res) => {
