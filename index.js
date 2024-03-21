@@ -13,14 +13,6 @@ app.get("/", (req, res) =>{
     res.send("Plants :)")
 });
 
-app.get("/api/plants/waterTime/:ID", (req, res) => {
-    res.json(true);
-});
-
-app.get("/api/plants/sunTime/:ID", (req, res) => {
-    res.json(true);
-});
-
 app.get('/plants', (req, res) => {
     const filePath = path.join(__dirname, 'data', 'plants.json');
 
