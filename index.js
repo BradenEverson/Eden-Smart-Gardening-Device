@@ -171,7 +171,7 @@ app.get('/sun/rand', (req, res) => {
 app.post('/sun/update', (req, res) => {
     const { ID, newSun } = req.body;
 
-    if (typeof ID === 'undefined' || newWater === undefined) {
+    if (typeof ID === 'undefined' || newSun === undefined) {
         return res.status(400).send('Missing ID or sun in request body');
     }
 
